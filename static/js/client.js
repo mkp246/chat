@@ -3,8 +3,10 @@ var handler = function(){
     $("#color").val('#'+hue.substr(-6));
     $('#connect').on("click",function(){
         if($('#name').val()){
-            window.socket = io({
-                query: {
+            window.socket = io.connect({
+                secure: true,
+				transports:  ["xhr-polling","websocket","polling", "htmlfile"],
+				query: {
                     name : $('#name').val(),
                     color : $('#color').val()
                 }
