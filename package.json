@@ -1,0 +1,30 @@
+{
+  "name": "chat",
+  "version": "1.0.0",
+  "description": "Chat app using websockets and RTCWeb..",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkp246/chat.git"
+  },
+  "keywords": [
+    "node",
+    "socket.io",
+    "express.js",
+    "webrtc"
+  ],
+  "author": "mkp246",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkp246/chat/issues"
+  },
+  "homepage": "https://github.com/mkp246/chat#readme",
+  "dependencies": {
+    "express": "^4.15.4",
+    "http": "0.0.0",
+    "socket.io": "^2.0.3"
+  }
+}
