@@ -16,6 +16,7 @@ var handler = function(){
                 console.log(data);
                 var elem = "<li style=background-color:"+data.color+"><p>"+data.name+"</p><p>"+data.message+"</p></li>"
                 $('#chat').append(elem);
+				notif.play();
             });
         }else{
             alert("please choose a name...");
@@ -38,3 +39,4 @@ var handler = function(){
 };
 
 $('document').ready(handler);
+var notif = new Audio("https://raw.githubusercontent.com/IonDen/ion.sound/master/sounds/tap.mp3");
