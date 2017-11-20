@@ -14,6 +14,7 @@ app.use(express.static('static'));
 
 var io = require('socket.io')(httpsServer);
 
+var port = process.env.PORT || 8082;
 io.on('connection',function(socket){
     console.log("a user connected..."+ socket.handshake.query.name);
     socket.on('message',function(data){
@@ -22,6 +23,6 @@ io.on('connection',function(socket){
     })
 });
 
-httpsServer.listen(8082, function(){
-    console.log('listening on port 8082(https)...');
+httpsServer.listen(port, function(){
+    console.log('listening on port '+ port + '(https)...');
 });
