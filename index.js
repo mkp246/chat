@@ -18,7 +18,6 @@ var port = process.env.PORT || 8082;
 io.on('connection',function(socket){
     console.log("a user connected..."+ socket.handshake.query.name);
     socket.on('message',function(data){
-        console.log("Received : " + data.toString());
         io.emit('message', data);
     })
 });
